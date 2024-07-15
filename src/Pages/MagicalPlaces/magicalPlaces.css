@@ -119,14 +119,14 @@ button {
   cursor: pointer;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .slideContent {
     width: 70%; 
     height: 50vh;
   }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   .slideContent {
     width: 50%; 
     height: 70vh;

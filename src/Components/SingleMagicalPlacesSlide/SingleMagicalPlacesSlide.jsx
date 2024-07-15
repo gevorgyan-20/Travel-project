@@ -1,7 +1,7 @@
 import React from 'react'
 import UseTilt from '../../Hook/UseTilt';
 import '../../Pages/MagicalPlaces/magicalPlaces.css'
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 
 
