@@ -1,0 +1,184 @@
+.feedbacksPartOfHomePage{
+    width: 100%;
+    height: 750px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 255, 0.027);
+    display: flex;
+    padding-top: 25px;
+    flex-direction: column;
+    align-items: center;
+    & .container {
+        width: 1300px;
+        height: 750px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & .feedbackTitle {
+            width: 55%;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            h1 {
+                font-family: 'Nunito';
+                font-size: 43px;
+                color: rgb(12, 21, 105);
+                margin: 0;
+            }
+            h3 {
+                font-family: 'Nunito';
+                font-size: 21px;
+                color: rgb(104, 103, 103);
+                margin: 0;
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 45px;
+                    position: absolute;
+                    border-radius: 13px;
+                    margin-top: 20px;
+                    right: 50px;
+                    height: 4px;
+                    background-color: red;
+                }
+            }
+        }
+        & .feedbackMainBlog {
+            width: 88%;
+            height: 500px;
+            padding: 25px 17px;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            overflow: hidden;
+            & .reviewsBlock {
+                align-self: flex-start;
+                height: 440px;
+                display: flex;
+                gap: 30px;
+                transition: 1.5s;
+                justify-content: start;
+                align-items: center;
+            }
+            & .paginationPart {
+                width: 15%;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                & .paginationBlocks {
+                    width: 9px;
+                    height: 9px;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    background-color: gray;
+                }
+                & .current {
+                    background-color: red;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .feedbacksPartOfHomePage .container {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .feedbacksPartOfHomePage {
+        height: auto;
+    }
+
+    .feedbacksPartOfHomePage .container .feedbackTitle {
+        width: 70%;
+    }
+
+    .feedbacksPartOfHomePage .container .feedbackTitle h1 {
+        font-size: 36px;
+    }
+
+    .feedbacksPartOfHomePage .container .feedbackTitle h3 {
+        font-size: 18px;
+    }
+
+    .feedbacksPartOfHomePage .container .feedbackMainBlog {
+        width: 95%;
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .feedbacksPartOfHomePage .container .feedbackMainBlog .reviewsBlock {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feedbacksPartOfHomePage .container .feedbackMainBlog .paginationPart {
+        width: 20%;
+    }
+}
+
+@media (max-width: 768px) {
+    .feedbacksPartOfHomePage .container .feedbackTitle {
+        width: 80%;
+    }
+
+    .feedbacksPartOfHomePage .container .feedbackTitle h1 {
+        font-size: 28px;
+    }
+
+    .feedbacksPartOfHomePage .container .feedbackTitle h3 {
+        font-size: 16px;
+    }
+
+    .feedbacksPartOfHomePage .container .feedbackMainBlog {
+        width: 100%;
+        height: auto;
+        padding: 15px 5px;
+    }
+
+    .feedbacksPartOfHomePage .container .feedbackMainBlog .reviewsBlock {
+        height: auto;
+        gap: 20px;
+    }
+
+    .feedbacksPartOfHomePage .container .feedbackMainBlog .paginationPart {
+        width: 25%;
+    }
+}
+
+@media (max-width: 480px) {
+    .feedbacksPartOfHomePage {
+        padding-top: 15px;
+    }
+
+    .feedbacksPartOfHomePage .container .feedbackTitle {
+        width: 90%;
+    }
+
+    .feedbacksPartOfHomePage .container .feedbackTitle h1 {
+        font-size: 24px;
+    }
+
+    .feedbacksPartOfHomePage .container .feedbackTitle h3 {
+        font-size: 14px;
+    }
+
+    .feedbacksPartOfHomePage .container .feedbackMainBlog {
+        padding: 10px 5px;
+    }
+
+    .feedbacksPartOfHomePage .container .feedbackMainBlog .reviewsBlock {
+        gap: 15px;
+    }
+
+    .feedbacksPartOfHomePage .container .feedbackMainBlog .paginationPart {
+        width: 30%;
+    }
+}

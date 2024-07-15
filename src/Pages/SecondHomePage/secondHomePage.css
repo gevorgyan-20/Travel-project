@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.secondHomePage {
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    & .secondPageTopBlock {
+        width: 100%;
+        height: 700px;
+        background-image: url('https://media.architecturaldigest.com/photos/584988030f1fdbff1cc00349/4:3/w_3736,h_2802,c_limit/jackson-hole-01.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        & .backgroundPart {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.425);
+            & .textPart {
+                width: 83%;
+                height: 300px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h2 {
+                    font-size: 43px;
+                    color: white;
+                    font-family: 'Nunito';
+                    text-transform: uppercase;
+                }
+                & .animatedPartOfWelcome {
+                    width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    font-family: 'Nunito';
+                    font-size: 47px;
+                    color: white;
+                }
+            }
+        }
+    }
+    & .whyToChooseUs {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & .block {
+            width: 80%;
+            height: 460px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            & .textPart {
+                h2 {
+                    font-size: 43px;
+                    color: rgb(12, 21, 105);
+                    font-family: 'Nunito';
+                    margin: 0;
+                }
+                p {
+                    font-size: 27px;
+                    color: rgb(12, 21, 105);
+                    font-family: 'Nunito';
+                    padding-bottom: 10px;
+                    margin: 0;
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 25px;
+                    position: absolute;
+                    border-radius: 13px;
+                    right: 510px;
+                    height: 4px;
+                    background-color: red;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .secondHomePage .secondPageTopBlock .backgroundPart .textPart h2 {
+        font-size: 56px; 
+    }
+
+    .secondHomePage .secondPageTopBlock .backgroundPart .textPart .animatedPartOfWelcome {
+        font-size: 60px; 
+    }
+
+    .secondHomePage .whyToChooseUs .block .textPart h2 {
+        font-size: 56px; 
+    }
+
+    .secondHomePage .whyToChooseUs .block .textPart p {
+        font-size: 36px; 
+    }
+}
+
+@media (min-width: 1024px) {
+    .secondHomePage .secondPageTopBlock .backgroundPart .textPart h2 {
+        font-size: 72px;
+    }
+
+    .secondHomePage .secondPageTopBlock .backgroundPart .textPart .animatedPartOfWelcome {
+        font-size: 80px; 
+    }
+
+    .secondHomePage .whyToChooseUs .block .textPart h2 {
+        font-size: 72px;
+    }
+
+    .secondHomePage .whyToChooseUs .block .textPart p {
+        font-size: 42px;
+    }
+}

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.tour-registration {
+  background: #ffffff;
+  font-family: 'Nunito';
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: float 6s ease-in-out infinite;
+  h2 {
+    margin-bottom: 20px;
+    font-family: 'Nunito';
+    font-size: 24px;
+    color: #333333;
+    text-align: center;
+    animation: colorchange 5s infinite alternate;
+  }
+  form div {
+    margin-bottom: 15px;
+    font-family: 'Nunito';
+    & .tourName {
+        font-family: 'Nunito';
+        border: 1px solid #dddddd;
+        background: white;
+        color: black;
+        margin: 10px 0;
+        cursor: unset;
+    }
+  }
+  label {
+    display: block;
+    font-family: 'Nunito';
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555555;
+  }
+  select {
+    font-size: 15px;
+  }
+  input, select{
+    width: calc(100% - 10px);
+    padding: 10px;
+    font-family: 'Nunito';
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    outline: none;
+    transition: border 0.3s;
+    &:focus {
+        border-color: #007bff;
+      }
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    font-family: 'Nunito';
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    &:hover {
+        background: linear-gradient(45deg, #2575fc, #6a11cb);
+    }
+  }
+  & .seeMorePart {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    z-index: 5555555;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.384);
+    & .container {
+        position: fixed;
+        top: 100px;
+        width: 450px;
+        padding-bottom: 15px;
+        border-radius: 12px;
+        border: 1px solid gray;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation: seeMoreAnimation 1s;
+        & .backToHome {
+            background: rgb(255, 255, 255);
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+}
+}
+
+@keyframes seeMoreAnimation {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: 100px;
+    }
+}
+
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes colorchange {
+  0% { color: #ff6347; }
+  100% { color: #1e90ff; }
+}
+
+@media (min-width: 768px) {
+  .tour-registration {
+      padding: 30px;
+  }
+
+  .tour-registration h2 {
+      font-size: 28px;
+  }
+
+  .seeMorePart .container {
+      width: 80%; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .tour-registration {
+      padding: 40px;
+  }
+
+  .tour-registration h2 {
+      font-size: 32px;
+  }
+
+  .seeMorePart .container {
+      width: 60%; 
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .seeMorePart {
+      display: flex; 
+  }
+}

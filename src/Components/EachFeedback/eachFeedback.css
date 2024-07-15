@@ -1,0 +1,158 @@
+.eachFeedback {
+    width: 350px;
+    padding-top: 30px;
+    border: 2px solid rgba(128, 128, 128, 0.116);
+    border-radius: 6px;
+    height: 430px;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    & .quotes {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        & .secondQuote {
+            transform: rotate(180deg);
+        }
+    }
+    & .feedbackText {
+        width: 82%;
+        height: 200px;
+        p {
+            height: 90px;
+            overflow: hidden;
+            font-family: 'Nunito';
+            font-size: 17px;
+            color: rgb(104, 103, 103);
+        }
+    }
+    & .button {
+        padding-top: 35px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+            width: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            height: 30px;
+            border-radius: 4px;
+            border: 1px solid gold;
+            background-color: rgb(255, 255, 255);
+            transition: 0.4s;
+            span {
+                width: 6px;
+                height: 6px;
+                background-color: gold;
+                border-radius: 50%;
+                transition: 1.4s;
+            }
+            &:hover {
+                background-color: gold;
+                span {
+                    background-color: black;
+                }
+            }
+        }
+    }
+    & .author {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h3 {
+            font-family: 'Nunito';
+            color: rgb(12, 21, 105);
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .eachFeedback {
+        width: 300px;
+        height: 400px;
+    }
+
+    .eachFeedback .feedbackText p {
+        font-size: 15px;
+    }
+
+    .eachFeedback .author h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .eachFeedback {
+        width: 100%;
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .eachFeedback .quotes, 
+    .eachFeedback .feedbackText, 
+    .eachFeedback .author {
+        width: 100%;
+    }
+
+    .eachFeedback .quotes div {
+        width: 30px;
+        height: 30px;
+    }
+
+    .eachFeedback .feedbackText p {
+        font-size: 14px;
+    }
+
+    .eachFeedback .author h3 {
+        font-size: 18px;
+    }
+
+    .eachFeedback .button button {
+        width: 40px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .eachFeedback {
+        width: 100%;
+        height: auto;
+        padding: 15px 5px;
+    }
+
+    .eachFeedback .quotes div {
+        width: 25px;
+        height: 25px;
+    }
+
+    .eachFeedback .feedbackText p {
+        font-size: 12px;
+    }
+
+    .eachFeedback .author h3 {
+        font-size: 16px;
+    }
+
+    .eachFeedback .button button {
+        width: 35px;
+        height: 25px;
+    }
+
+    .eachFeedback .button button span {
+        width: 5px;
+        height: 5px;
+    }
+}

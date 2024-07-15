@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.contactPage {
+    width: 100%;
+    padding: 50px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .container {
+        padding: 25px 0;
+        width: 1300px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        h1 {
+            color: rgb(12, 21, 105);
+            font-family: 'Nunito';
+        }
+        & .mainContainer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 22px;
+            & .info {
+                width: 50%;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 15px;
+                span {
+                    font-family: 'Nunito';
+                    color: rgb(56, 56, 56);
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .contactPage .info {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contactPage .container {
+        padding: 20px 0;
+    }
+    
+    .contactPage h1 {
+        font-size: 2rem;
+    }
+    
+    .contactPage .info span {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contactPage .container {
+        padding: 15px 0;
+    }
+    
+    .contactPage h1 {
+        font-size: 1.8rem;
+    }
+    
+    .contactPage .info {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

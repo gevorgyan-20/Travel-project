@@ -1,0 +1,106 @@
+.seeMorePart {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    z-index: 5555555;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.384);
+    & .container {
+        position: fixed;
+        top: 100px;
+        width: 450px;
+        padding-bottom: 15px;
+        border-radius: 12px;
+        border: 1px solid gray;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation: seeMoreAnimation 1s;
+        & .title {
+            width: 100%;
+            padding: 0 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.144);
+            p {
+                font-family: 'Nunito';
+                font-size: 16px;
+                font-weight: 600;
+                color: rgb(12, 21, 105);
+            }
+        }
+        & .quotes {
+            padding-top: 15px;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            div {
+                width: 36px;
+                height: 36px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            & .secondQuote {
+                transform: rotate(180deg);
+            }
+        }
+        & .text {
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+                font-family: 'Nunito';
+                font-size: 18px;
+                color: rgb(104, 103, 103);
+            }
+        }
+    }
+}
+
+@keyframes seeMoreAnimation {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .seeMorePart .container {
+        width: 90%;
+        max-width: 400px;
+    }
+    
+    .seeMorePart .container .quotes {
+        width: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    .seeMorePart .container {
+        width: 90%;
+        max-width: 300px;
+        top: 50px;
+    }
+    
+    .seeMorePart .container .quotes {
+        width: 70%;
+    }
+    
+    .seeMorePart .container .text p {
+        font-size: 16px;
+    }
+}

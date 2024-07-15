@@ -1,0 +1,95 @@
+footer {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2d2e32;
+    & .footerBlock {
+        margin: 0 auto;
+        width: 75%;
+        height: 65px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & .copyright {
+            width: 40%;
+            h3 {
+                color: white;
+            }
+        }
+        & .links {
+            width: 25%;
+            a svg {
+                transition: 0.2s;
+            }
+            a svg:hover {
+                scale: 1.2 !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    footer {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    footer .footerBlock {
+        width: 85%;
+        flex-direction: column;
+        height: auto;
+    }
+
+    footer .footerBlock .copyright,
+    footer .footerBlock .links {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0;
+    }
+
+    footer .footerBlock {
+        width: 90%;
+    }
+
+    footer .footerBlock .links {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    footer .footerBlock .links a svg {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 10px 0;
+    }
+
+    footer .footerBlock {
+        width: 95%;
+    }
+
+    footer .footerBlock .copyright h3 {
+        font-size: 14px;
+    }
+
+    footer .footerBlock .links {
+        width: 100%;
+    }
+
+    footer .footerBlock .links a svg {
+        width: 20px;
+        height: 20px;
+    }
+}

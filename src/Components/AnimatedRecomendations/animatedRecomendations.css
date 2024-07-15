@@ -1,0 +1,164 @@
+.animatedRecomendations {
+    width: 1300px;
+    margin: 0 auto;
+    height: 500px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 25px;
+    overflow: hidden;
+    & .animatedFromLeft {
+        width: 32%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        border-radius: 10px;
+        overflow: hidden;
+        & .firstBlock {
+            border-radius: 10px;
+            width: 100%;
+            height: 450px;
+            border: 1px solid rgba(128, 128, 128, 0.400);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            div {
+                width: 100%;
+                height: 450px;
+                background-color: rgba(0, 0, 0, 0.308);
+                padding: 30px 20px;
+                text-align: start;
+                h3, p {
+                    margin: 0;
+                    color: white;
+                    font-family: 'Nunito';
+                }
+                h3 {
+                    font-size: 28px;
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        position: absolute;
+                        border-radius: 13px;
+                        right: 51x;
+                        height: 2px;
+                        background-color: white;
+                    }
+                }
+                p {
+                    padding: 15px 0;
+                }
+            }
+        }
+    }
+    & .animatedFromRight {
+        width: 68%;
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+        & .secondBlock {
+            width: 46%;
+            height: 380px;
+            border-radius: 7px;
+            border: 1px solid rgba(216, 215, 215, 0.625);
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            overflow: hidden;
+            div {
+                width: 100%;
+                height: 250px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            h4 {
+                padding: 0 10px;
+                font-family: 'Nunito';
+                color: rgb(12, 21, 105);
+                text-align: start;
+            }
+        }
+    }
+}
+
+@keyframes slideToRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-1700px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(1700px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 1300px) {
+    .animatedRecomendations {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .animatedRecomendations {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .animatedRecomendations .animatedFromLeft, 
+    .animatedRecomendations .animatedFromRight {
+        width: 100%;
+    }
+
+    .animatedRecomendations .animatedFromLeft .firstBlock,
+    .animatedRecomendations .animatedFromRight .secondBlock {
+        height: auto;
+    }
+
+    .animatedRecomendations .animatedFromRight {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .animatedRecomendations .animatedFromRight .secondBlock {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .animatedRecomendations .animatedFromLeft .firstBlock div h3 {
+        font-size: 24px;
+    }
+
+    .animatedRecomendations .animatedFromLeft .firstBlock div p,
+    .animatedRecomendations .animatedFromRight .secondBlock h4 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .animatedRecomendations .animatedFromLeft .firstBlock div h3 {
+        font-size: 20px;
+    }
+
+    .animatedRecomendations .animatedFromLeft .firstBlock div p,
+    .animatedRecomendations .animatedFromRight .secondBlock h4 {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,159 @@
+.aboutPartOfHomePage {
+    width: 1300px;
+    height: 850px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & .topPart {
+        width: 98%;
+        height: 350px;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        & .imagePart {
+            width: 47%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            div {
+                width: 90%;
+                height: 250px;
+                border: 1px solid rgba(128, 128, 128, 0.26);
+                overflow: hidden;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: 97%;
+                    height: 97%;
+                    border-radius: 8px;
+                }
+            }
+        }
+        & .contentPart {
+            width: 50%;
+            height: 270px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            h1 {
+                padding: 25px 0;
+                font-size: 46px;
+                font-family: "Nunito";
+                color: rgb(216, 61, 61);
+                margin: 0;
+            }
+            p {
+                font-size: 19px;
+                font-family: "Nunito";
+                color: rgb(56, 56, 56);
+                margin: 0;
+                text-align: start;
+            }
+        }
+    }
+    & .bottomPart {
+        width: 97%;
+        height: 490px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        h5 {
+            padding: 15px 0;
+            font-size: 24px;
+            font-family: "Nunito";
+            color: blue;
+            margin: 0;
+        }
+        p {
+            font-size: 19px;
+            font-family: "Nunito";
+            color: rgb(56, 56, 56);
+            margin: 0;
+            text-align: start;
+            padding-bottom: 15px;
+        }
+        ul li {
+            text-align: start;
+            font-size: 19px;
+            font-family: "Nunito";
+            color: rgb(104, 103, 103);
+            list-style: none;
+            &::before {
+                content: "";
+                background: #f7395a;
+                font-weight: bold;
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                border-radius: 100%;
+                margin-right: 7px;
+            }
+        }
+        & .lastPart {
+            color: red;
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .aboutPartOfHomePage .topPart {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .aboutPartOfHomePage .topPart .imagePart,
+    .aboutPartOfHomePage .topPart .contentPart {
+        width: 100%;
+    }
+
+    .aboutPartOfHomePage .topPart .imagePart div {
+        width: 80%;
+    }
+
+    .aboutPartOfHomePage .topPart .contentPart h1 {
+        font-size: 36px;
+    }
+
+    .aboutPartOfHomePage .topPart .contentPart p {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutPartOfHomePage .bottomPart h5 {
+        font-size: 20px;
+    }
+
+    .aboutPartOfHomePage .bottomPart p,
+    .aboutPartOfHomePage .bottomPart ul li {
+        font-size: 17px;
+    }
+
+    .aboutPartOfHomePage .bottomPart .lastPart {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutPartOfHomePage .topPart .contentPart h1 {
+        font-size: 28px;
+    }
+
+    .aboutPartOfHomePage .topPart .contentPart p,
+    .aboutPartOfHomePage .bottomPart p,
+    .aboutPartOfHomePage .bottomPart ul li {
+        font-size: 15px;
+    }
+
+    .aboutPartOfHomePage .bottomPart h5 {
+        font-size: 18px;
+    }
+
+    .aboutPartOfHomePage .bottomPart .lastPart {
+        font-size: 16px;
+    }
+}

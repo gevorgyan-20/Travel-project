@@ -1,0 +1,107 @@
+.secondHomePageWhyBlocks {
+    width: 1320px;
+    height: 320px;
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    & .eachSecondHomePageWhyBlock{
+        width: 280px;
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        & .circleBlocks {
+            height: 174px;
+            width: 174px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(201, 198, 198);
+            div {
+                height: 160px;
+                width: 160px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(142, 147, 165);
+                div {
+                    height: 145px;
+                    width: 145px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgb(86, 59, 204);
+                }
+            }
+        }
+        & .textBlocks {
+            width: 94%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            span {
+                font-family: 'Nunito';
+                color: rgb(112, 108, 108);
+                font-size: 20px;
+            }
+        }
+    } 
+}
+
+@media (max-width: 1366px) {
+    .secondHomePageWhyBlocks {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .eachSecondHomePageWhyBlock {
+        width: 25%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .eachSecondHomePageWhyBlock {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .secondHomePageWhyBlocks {
+        flex-wrap: wrap;
+    }
+
+    .eachSecondHomePageWhyBlock {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    .circleBlocks {
+        height: 140px;
+        width: 140px;
+    }
+
+    .circleBlocks > div {
+        height: 125px;
+        width: 125px;
+    }
+
+    .circleBlocks > div > div {
+        height: 110px;
+        width: 110px;
+    }
+
+    .textBlocks > span {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .eachSecondHomePageWhyBlock {
+        width: 100%;
+    }
+}
