@@ -84,7 +84,7 @@
         }
     }
 }
-
+/* 
 @media (min-width: 768px) {
     .secondHomePage .secondPageTopBlock .backgroundPart .textPart h2 {
         font-size: 56px; 
@@ -101,9 +101,9 @@
     .secondHomePage .whyToChooseUs .block .textPart p {
         font-size: 36px; 
     }
-}
+} */
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
     .secondHomePage .secondPageTopBlock .backgroundPart .textPart h2 {
         font-size: 72px;
     }
@@ -119,4 +119,4 @@
     .secondHomePage .whyToChooseUs .block .textPart p {
         font-size: 42px;
     }
-}
+} */
