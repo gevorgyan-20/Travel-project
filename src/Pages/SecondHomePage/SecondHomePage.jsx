@@ -75,7 +75,7 @@ const SecondHomePage = () => {
         <div className='whyToChooseUs'>
             <div className='block'>
                 <div className='textPart'>
-                    <h2>5 Reasons Why To Travel With Highland Treks</h2>
+                    <h2>4 Reasons Why To Travel With Highland Treks</h2>
                     <p>Our main goal is to make your vacation in the mountains interesting and unforgettable!</p>
                 </div>
                 <SecondHomePageWhyBlocks/>
