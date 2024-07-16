@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { footerRendering, isInSiteChanging, navbarRendering, seeMoreButtonWork, selectAllTours, toursFiltering } from '../../Store/AllToursSlice/allToursSlice';
 import MainPageSingleTour from '../../Components/MainPageSingleTour/MainPageSingleTour';
 import Close from '../../Icons/Close';
+import PageTitle from '../../Components/PageTitle/PageTitle';
 
 const MainPage = () => {
     const { sortedTours, notSortedTours, isSeeMoreButtonActive} = useSelector(selectAllTours)
@@ -35,6 +36,7 @@ const MainPage = () => {
 
   return (
     <div className='mainPage'>
+      <PageTitle title={'Plan your visit'}/>
         <OnlyMainPageStyle/>
         <div className='mainPageFirstBlock'>
             <label htmlFor="">Filter by country </label>

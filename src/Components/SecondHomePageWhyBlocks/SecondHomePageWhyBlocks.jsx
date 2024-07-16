@@ -4,10 +4,12 @@ import Hearth from '../../Icons/Hearth'
 import Plane from '../../Icons/Plane'
 import Send from '../../Icons/Send'
 import Globus from '../../Icons/Globus'
+import PageTitle from '../PageTitle/PageTitle'
 
 const SecondHomePageWhyBlocks = () => {
   return (
     <div className='secondHomePageWhyBlocks'>
+        <PageTitle title={'Highland Treks'}/>
         <div className='eachSecondHomePageWhyBlock'>
             <div className='circleBlocks'>
                 <div>

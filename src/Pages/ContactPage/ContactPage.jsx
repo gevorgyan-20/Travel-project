@@ -6,6 +6,7 @@ import { createGlobalStyle } from 'styled-components'
 import Phone from '../../Icons/Phone'
 import Mail from '../../Icons/Mail'
 import MapContent from '../../Components/MapContent/MapContent'
+import PageTitle from '../../Components/PageTitle/PageTitle'
 
 const ContactPage = () => {
     const dispatch = useDispatch()
@@ -24,6 +25,7 @@ const ContactPage = () => {
 
   return (
     <div className='contactPage'>
+        <PageTitle title={'Contact'}/>
         <OnlyContactStyle/>
         <div className='container'>
             <h1>Contact with us</h1>

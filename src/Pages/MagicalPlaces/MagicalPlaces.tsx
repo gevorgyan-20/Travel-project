@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { footerRendering, isInSiteChanging, navbarRendering, selectAllTours, slidesToLeft, slidesToRight} from '../../Store/AllToursSlice/allToursSlice'
 import SingleMagicalPlacesSlide from '../../Components/SingleMagicalPlacesSlide/SingleMagicalPlacesSlide'
 import { createGlobalStyle } from 'styled-components';
+import PageTitle from '../../Components/PageTitle/PageTitle'
 
 const MagicalPlaces:React.FC = () => {
   const {slideTours, tours, slideIndex} = useSelector(selectAllTours)
@@ -39,6 +40,7 @@ body {
 
   return (
     <div className="slides">
+      <PageTitle title={'Best Places'}/>
       <GlobalStyle/>
         <button onClick={() => dispatch(slidesToLeft())}>‹</button>
 

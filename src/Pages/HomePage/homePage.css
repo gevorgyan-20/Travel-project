@@ -103,14 +103,20 @@
   
   @media (max-width: 900px) {
    .content h1 {
-      font-size: 7rem;
+      font-size: 5.5rem;
     }
   }
 
-  
-  @media (max-width: 620px) {
+  /* @media (max-width: 860px) {
     .content h1 {
-      font-size: 5rem;
+      font-size: 6rem;
+    }
+  } */
+
+  
+  @media (max-width: 707px) {
+    .content h1 {
+      font-size: 4.5rem;
     }
   }
   

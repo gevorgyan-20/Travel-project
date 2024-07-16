@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { createGlobalStyle } from 'styled-components';
 import { footerRendering, navbarRendering } from '../../Store/AllToursSlice/allToursSlice';
+import PageTitle from '../../Components/PageTitle/PageTitle';
 
 const EachTourSinglePage = () => {
     const location = useLocation();
@@ -26,6 +27,7 @@ const EachTourSinglePage = () => {
 
   return (
     <div className='eachTourSinglePage'>
+        <PageTitle title={`${location.state.title}`}/>
         <EachSinglePageStyle/>
         <div className='singleImageBlock'>
           <div>

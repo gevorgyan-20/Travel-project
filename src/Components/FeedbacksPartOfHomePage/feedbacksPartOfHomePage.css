@@ -1,6 +1,5 @@
 .feedbacksPartOfHomePage{
     width: 100%;
-    /* height: 750px; */
     margin: 0 auto;
     background-color: rgba(0, 0, 255, 0.027);
     display: flex;
@@ -45,7 +44,7 @@
             }
         }
         & .feedbackMainBlog {
-            width: 88%;
+            width: 100%;
             height: 500px;
             padding: 25px 17px;
             display: flex;
@@ -54,11 +53,12 @@
             gap: 25px;
             overflow: hidden;
             & .reviewsBlock {
+                padding-left: 30px;
                 position: relative;
                 align-self: flex-start;
                 height: 440px;
                 display: flex;
-                gap: 30px;
+                gap: 107px;
                 transition: 1.5s;
                 justify-content: start;
                 align-items: center;
@@ -94,7 +94,43 @@
 
 @media (max-width: 1284px) {
     .reviewsBlock {
-        gap: 43px !important;
+        gap: 94px !important;
+    }
+}
+
+@media (max-width: 1260px) {
+    .reviewsBlock {
+        gap: 99px !important;
+    }
+}
+
+@media (max-width: 1208px) {
+    .reviewsBlock {
+        gap: 93px !important;
+    }
+}
+
+@media (max-width: 1170px) {
+    .reviewsBlock {
+        gap: 97px !important;
+    }
+}
+
+@media (max-width: 1110px) {
+    .reviewsBlock {
+        gap: 104px !important;
+    }
+}
+
+@media (max-width: 1087px) {
+    .reviewsBlock {
+        gap: 90px !important;
+    }
+}
+
+@media (max-width: 1065px) {
+    .reviewsBlock {
+        gap: 100px !important;
     }
 }
 
@@ -126,6 +162,16 @@
     }
 }
 
+@media (max-width: 778px) {
+    .feedbacksPartOfHomePage .container .feedbackMainBlog {
+        width: 70%;
+    }
+    .feedbacksPartOfHomePage .container .feedbackMainBlog .reviewsBlock {
+        padding-left: 80px !important;
+        gap: 80px !important;
+    }
+}
+
 @media (max-width: 768px) {
     .feedbacksPartOfHomePage .container .feedbackTitle {
         width: 80%;
@@ -139,19 +185,74 @@
         font-size: 16px;
     }
 
-    .feedbacksPartOfHomePage .container .feedbackMainBlog {
-        width: 100%;
-        height: auto;
-        padding: 15px 5px;
-    }
-
-    .feedbacksPartOfHomePage .container .feedbackMainBlog .reviewsBlock {
-        height: auto;
-        gap: 20px;
-    }
-
     .feedbacksPartOfHomePage .container .feedbackMainBlog .paginationPart {
-        width: 25%;
+        width: 40%;
+    }
+}
+
+@media (max-width: 718px) {
+    .feedbacksPartOfHomePage .container .feedbackMainBlog .reviewsBlock {
+        padding-left: 60px !important;
+        gap: 80px !important;
+    }
+    .feedbacksPartOfHomePage .container .feedbackMainBlog .paginationPart {
+        width: 45%;
+    }
+}
+
+@media (max-width: 671px) {
+    .feedbacksPartOfHomePage .container .feedbackMainBlog .reviewsBlock {
+        padding-left: 40px !important;
+        gap: 70px !important;
+    }
+    .feedbacksPartOfHomePage .container .feedbackMainBlog .paginationPart {
+        width: 48%;
+    }
+}
+
+@media (max-width: 641px) {
+    .feedbacksPartOfHomePage .container .feedbackMainBlog .reviewsBlock {
+        padding-left: 30px !important;
+        gap: 40px !important;
+    }
+    .feedbacksPartOfHomePage .container .feedbackMainBlog .paginationPart {
+        width: 55%;
+    }
+}
+
+@media (max-width: 627px) {
+    .feedbacksPartOfHomePage .container .feedbackMainBlog .reviewsBlock {
+        padding-left: 15px !important;
+        gap: 40px !important;
+    }
+    .feedbacksPartOfHomePage .container .feedbackMainBlog .paginationPart {
+        width: 60%;
+    }
+}
+
+@media (max-width: 607px) {
+    .feedbacksPartOfHomePage .container .feedbackMainBlog .reviewsBlock {
+        padding-left: 5px !important;
+        gap: 40px !important;
+    }
+}
+
+@media (max-width: 592px) {
+    .feedbacksPartOfHomePage .container .feedbackMainBlog .reviewsBlock {
+        padding-left: 0 !important;
+        gap: 60px !important;
+    }
+    .feedbacksPartOfHomePage .container .feedbackMainBlog .paginationPart {
+        width: 66%;
+    }
+}
+
+@media (max-width: 528px) {
+    .feedbacksPartOfHomePage .container .feedbackMainBlog .reviewsBlock {
+        gap: 60px !important;
+    }
+    .feedbacksPartOfHomePage .container .feedbackMainBlog .paginationPart {
+        width: 70%;
     }
 }
 
@@ -181,6 +282,24 @@
     }
 
     .feedbacksPartOfHomePage .container .feedbackMainBlog .paginationPart {
-        width: 30%;
+        width: 70%;
+    }
+}
+
+@media (max-width: 395px) {
+    .feedbacksPartOfHomePage {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 360px) {
+    .feedbacksPartOfHomePage .container .feedbackMainBlog .paginationPart {
+        width: 85%;
+    }
+}
+
+@media (max-width: 335px) {
+    .feedbacksPartOfHomePage {
+        margin-top: 80px;
     }
 }

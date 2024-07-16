@@ -6,23 +6,10 @@ import EachFeedback from './../EachFeedback/EachFeedback';
 const FeedbacksPartOfHomePage = ({handler}) => {
     const [activeFeedbacks, setActiveFeedbacks] = useState(0)
     const [smallScreenSize, setSmallScreenSize] = useState(false)
-    const [position, setPosition] = useState(0)
-    const [startPosition, setStartPosition] = useState(0)
 
-    const handlerDragStart = (e) => {
-        setStartPosition(e.clientX)
-    }
-
-    const handlerDrag = (e) => {
-        setPosition(startPosition - e.clientX)
-    }
-    
-    const handlerDragOver = (e) => {
-        
-    }
 
     useEffect(() => {
-        if(window.innerWidth < 700) {
+        if(window.innerWidth < 779) {
             setSmallScreenSize(true)
         } else {
             setSmallScreenSize(false)
@@ -38,8 +25,8 @@ const FeedbacksPartOfHomePage = ({handler}) => {
             </div>
             <div className='feedbackMainBlog'>
                 <div className='reviewsBlock'
-                style={{transform: `translateX(-${smallScreenSize ? activeFeedbacks*220 - position : activeFeedbacks*1140 + position}px)`}}>
-                    {feedbacks.map((el) => <EachFeedback f1={handlerDrag} f2={handlerDragStart} id={el.id} text={el.text} author={el.author} handler={handler}/>)}
+                style={{transform: `translateX(-${activeFeedbacks*window.innerWidth}px)`}}>
+                    {feedbacks.map((el) => <EachFeedback id={el.id} text={el.text} author={el.author} handler={handler} key={Math.random() * 9999}/>)}
                 </div>
                 {smallScreenSize ? <div className='paginationPart'>
                     <span className={`paginationBlocks ${activeFeedbacks === 0 && 'current'}`} onClick={() => setActiveFeedbacks(0)}></span>
@@ -47,16 +34,16 @@ const FeedbacksPartOfHomePage = ({handler}) => {
                     <span className={`paginationBlocks ${activeFeedbacks === 2 && 'current'}`} onClick={() => setActiveFeedbacks(2)}></span>
                     <span className={`paginationBlocks ${activeFeedbacks === 3 && 'current'}`} onClick={() => setActiveFeedbacks(3)}></span>
                     <span className={`paginationBlocks ${activeFeedbacks === 4 && 'current'}`} onClick={() => setActiveFeedbacks(4)}></span>
-                    <span className={`paginationBlocks ${activeFeedbacks === 5 && 'current'}`} onClick={() => setActiveFeedbacks(0)}></span>
-                    <span className={`paginationBlocks ${activeFeedbacks === 6 && 'current'}`} onClick={() => setActiveFeedbacks(1)}></span>
-                    <span className={`paginationBlocks ${activeFeedbacks === 7 && 'current'}`} onClick={() => setActiveFeedbacks(2)}></span>
-                    <span className={`paginationBlocks ${activeFeedbacks === 8 && 'current'}`} onClick={() => setActiveFeedbacks(3)}></span>
-                    <span className={`paginationBlocks ${activeFeedbacks === 9 && 'current'}`} onClick={() => setActiveFeedbacks(4)}></span>
-                    <span className={`paginationBlocks ${activeFeedbacks === 10 && 'current'}`} onClick={() => setActiveFeedbacks(0)}></span>
-                    <span className={`paginationBlocks ${activeFeedbacks === 11 && 'current'}`} onClick={() => setActiveFeedbacks(1)}></span>
-                    <span className={`paginationBlocks ${activeFeedbacks === 12 && 'current'}`} onClick={() => setActiveFeedbacks(2)}></span>
-                    <span className={`paginationBlocks ${activeFeedbacks === 13 && 'current'}`} onClick={() => setActiveFeedbacks(3)}></span>
-                    <span className={`paginationBlocks ${activeFeedbacks === 14 && 'current'}`} onClick={() => setActiveFeedbacks(4)}></span>
+                    <span className={`paginationBlocks ${activeFeedbacks === 5 && 'current'}`} onClick={() => setActiveFeedbacks(5)}></span>
+                    <span className={`paginationBlocks ${activeFeedbacks === 6 && 'current'}`} onClick={() => setActiveFeedbacks(6)}></span>
+                    <span className={`paginationBlocks ${activeFeedbacks === 7 && 'current'}`} onClick={() => setActiveFeedbacks(7)}></span>
+                    <span className={`paginationBlocks ${activeFeedbacks === 8 && 'current'}`} onClick={() => setActiveFeedbacks(8)}></span>
+                    <span className={`paginationBlocks ${activeFeedbacks === 9 && 'current'}`} onClick={() => setActiveFeedbacks(9)}></span>
+                    <span className={`paginationBlocks ${activeFeedbacks === 10 && 'current'}`} onClick={() => setActiveFeedbacks(10)}></span>
+                    <span className={`paginationBlocks ${activeFeedbacks === 11 && 'current'}`} onClick={() => setActiveFeedbacks(11)}></span>
+                    <span className={`paginationBlocks ${activeFeedbacks === 12 && 'current'}`} onClick={() => setActiveFeedbacks(12)}></span>
+                    <span className={`paginationBlocks ${activeFeedbacks === 13 && 'current'}`} onClick={() => setActiveFeedbacks(13)}></span>
+                    <span className={`paginationBlocks ${activeFeedbacks === 14 && 'current'}`} onClick={() => setActiveFeedbacks(14)}></span>
                 </div> : <div className='paginationPart'>
                     <span className={`paginationBlocks ${activeFeedbacks === 0 && 'current'}`} onClick={() => setActiveFeedbacks(0)}></span>
                     <span className={`paginationBlocks ${activeFeedbacks === 1 && 'current'}`} onClick={() => setActiveFeedbacks(1)}></span>
@@ -70,4 +57,4 @@ const FeedbacksPartOfHomePage = ({handler}) => {
   )
 }
 
-export default FeedbacksPartOfHomePage
+export default FeedbacksPartOfHomePage;

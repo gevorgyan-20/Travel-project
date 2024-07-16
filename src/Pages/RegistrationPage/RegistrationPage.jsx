@@ -4,6 +4,7 @@ import { createGlobalStyle } from 'styled-components';
 import { footerRendering, navbarRendering } from '../../Store/AllToursSlice/allToursSlice';
 import { useDispatch } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
+import PageTitle from '../../Components/PageTitle/PageTitle';
 
 
 const RegistrationPage = () => {
@@ -32,6 +33,7 @@ const RegistrationPage = () => {
 
   return (
     <div className="tour-registration">
+      <PageTitle title={'Register now'}/>
         <OnlyRegistrationStyle/>
       <h2>Travel Tour Registration</h2>
       <form onSubmit={(e) => {e.preventDefault(); setRegistrated(true)}}>

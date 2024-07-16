@@ -97,9 +97,139 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1260px) {
     .eachFeedback {
-        width: 100%;
+        width: 320px;
+        height: 402px;
+    }
+
+    .eachFeedback .feedbackText p {
+        font-size: 14px;
+    }
+
+    .eachFeedback .author h3 {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 1208px) {
+    .eachFeedback {
+        width: 310px;
+        height: 390px;
+    }
+}
+
+@media (max-width: 1170px) {
+    .eachFeedback {
+        width: 292px;
+        height: 374px;
+    }
+    .eachFeedback .author h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1110px) {
+    .eachFeedback {
+        width: 285px;
+        height: 374px;
+    }
+    .eachFeedback .feedbackText p {
+        font-size: 13px;
+    }
+
+    .eachFeedback .author h3 {
+        font-size: 17.5px;
+    }
+}
+
+@media (max-width: 1087px) {
+    .eachFeedback {
+        width: 278px;
+        height: 370px;
+    }
+    .eachFeedback .feedbackText p {
+        font-size: 12px;
+    }
+
+    .eachFeedback .author h3 {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 1065px) {
+    .eachFeedback {
+        width: 265px;
+        height: 360px;
+    }
+    .eachFeedback .feedbackText p {
+        font-size: 11px;
+    }
+
+    .eachFeedback .author h3 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 938px) {
+    .eachFeedback {
+        width: 257px;
+        height: 350px;
+    }
+    .eachFeedback .feedbackText p {
+        font-size: 10px;
+    }
+
+    .eachFeedback .author h3 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 900px) {
+    .eachFeedback {
+        width: 243px;
+        height: 340px;
+    }
+    .eachFeedback .feedbackText p {
+        font-size: 9.5px;
+    }
+
+    .eachFeedback .author h3 {
+        font-size: 13.5px;
+    }
+}
+
+@media (max-width: 858px) {
+    .eachFeedback {
+        width: 232px;
+        height: 330px;
+    }
+    .eachFeedback .feedbackText p {
+        font-size: 9.5px;
+    }
+
+    .eachFeedback .author h3 {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 826px) {
+    .eachFeedback {
+        width: 220px;
+        height: 318px;
+    }
+    .eachFeedback .feedbackText p {
+        font-size: 9.5px;
+    }
+
+    .eachFeedback .author h3 {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 778px) {
+    .eachFeedback {
+        width: 400px;
         height: auto;
         padding: 20px 10px;
     }
@@ -129,33 +259,44 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 592px) {
     .eachFeedback {
-        width: 100%;
-        height: auto;
-        padding: 15px 5px;
+        width: 360px;
     }
+}
 
-    .eachFeedback .quotes div {
-        width: 25px;
-        height: 25px;
+@media (max-width: 528px) {
+    .eachFeedback {
+        width: 330px;
     }
+}
 
-    .eachFeedback .feedbackText p {
-        font-size: 12px;
+@media (max-width: 478px) {
+    .eachFeedback {
+        width: 310px;
     }
+}
 
-    .eachFeedback .author h3 {
-        font-size: 16px;
+@media (max-width: 448px) {
+    .eachFeedback {
+        width: 290px;
     }
+}
 
-    .eachFeedback .button button {
-        width: 35px;
-        height: 25px;
+@media (max-width: 421px) {
+    .eachFeedback {
+        width: 270px;
     }
+}
 
-    .eachFeedback .button button span {
-        width: 5px;
-        height: 5px;
+@media (max-width: 393px) {
+    .eachFeedback {
+        width: 220px;
+    }
+}
+
+@media (max-width: 322px) {
+    .eachFeedback {
+        width: 200px;
     }
 }
