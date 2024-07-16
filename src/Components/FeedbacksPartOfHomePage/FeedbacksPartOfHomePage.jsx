@@ -6,12 +6,28 @@ import EachFeedback from './../EachFeedback/EachFeedback';
 const FeedbacksPartOfHomePage = ({handler}) => {
     const [activeFeedbacks, setActiveFeedbacks] = useState(0)
     const [smallScreenSize, setSmallScreenSize] = useState(false)
+    const [position, setPosition] = useState(0)
+    const [startPosition, setStartPosition] = useState(0)
+
+    const handlerDragStart = (e) => {
+        setStartPosition(e.clientX)
+    }
+
+    const handlerDrag = (e) => {
+        setPosition(startPosition - e.clientX)
+    }
+    
+    const handlerDragOver = (e) => {
+        
+    }
 
     useEffect(() => {
         if(window.innerWidth < 700) {
             setSmallScreenSize(true)
+        } else {
+            setSmallScreenSize(false)
         }
-    }, [])
+    }, [window.innerWidth])
 
   return (
     <div className='feedbacksPartOfHomePage'>
@@ -21,8 +37,9 @@ const FeedbacksPartOfHomePage = ({handler}) => {
                 <h3>Travel reviews</h3>
             </div>
             <div className='feedbackMainBlog'>
-                <div className='reviewsBlock' style={{transform: `translateX(-${smallScreenSize ? activeFeedbacks*220 : activeFeedbacks*1140}px)`}}>
-                    {feedbacks.map((el) => <EachFeedback id={el.id} text={el.text} author={el.author} handler={handler}/>)}
+                <div className='reviewsBlock'
+                style={{transform: `translateX(-${smallScreenSize ? activeFeedbacks*220 - position : activeFeedbacks*1140 + position}px)`}}>
+                    {feedbacks.map((el) => <EachFeedback f1={handlerDrag} f2={handlerDragStart} id={el.id} text={el.text} author={el.author} handler={handler}/>)}
                 </div>
                 {smallScreenSize ? <div className='paginationPart'>
                     <span className={`paginationBlocks ${activeFeedbacks === 0 && 'current'}`} onClick={() => setActiveFeedbacks(0)}></span>

@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import './eachFeedback.css'
 import Quotes from '../../Icons/Quotes'
 
-const EachFeedback = ({id, text, author, handler}) => {
+const EachFeedback = ({id, text, author, handler, f1, f2}) => {
+    
   return (
-    <div className='eachFeedback'>
+    <div className='eachFeedback' onDragStart={f2} onDragCapture={f1}>
         <div className='quotes'>
             <div>
                 <Quotes/>

@@ -35,7 +35,7 @@
                 }
                 & .animatedPartOfWelcome {
                     width: 100%;
-                    white-space: nowrap;
+                    white-space: wrap;
                     overflow: hidden;
                     font-family: 'Nunito';
                     font-size: 47px;
@@ -57,6 +57,7 @@
             flex-direction: column;
             align-items: center;
             & .textPart {
+                position: relative;
                 h2 {
                     font-size: 43px;
                     color: rgb(12, 21, 105);
@@ -76,7 +77,7 @@
                     width: 25px;
                     position: absolute;
                     border-radius: 13px;
-                    right: 510px;
+                    right: 50%;
                     height: 4px;
                     background-color: red;
                 }
@@ -84,39 +85,63 @@
         }
     }
 }
-/* 
-@media (min-width: 768px) {
+
+@media (max-width: 1024px) {
     .secondHomePage .secondPageTopBlock .backgroundPart .textPart h2 {
-        font-size: 56px; 
+        font-size: 35px;
     }
 
     .secondHomePage .secondPageTopBlock .backgroundPart .textPart .animatedPartOfWelcome {
-        font-size: 60px; 
+        font-size: 30px; 
     }
 
     .secondHomePage .whyToChooseUs .block .textPart h2 {
-        font-size: 56px; 
+        font-size: 38px;
     }
 
     .secondHomePage .whyToChooseUs .block .textPart p {
-        font-size: 36px; 
+        font-size: 24px;
     }
-} */
+}
 
-/* @media (min-width: 1024px) {
+@media (max-width: 768px) {
     .secondHomePage .secondPageTopBlock .backgroundPart .textPart h2 {
-        font-size: 72px;
+        font-size: 32px; 
     }
 
     .secondHomePage .secondPageTopBlock .backgroundPart .textPart .animatedPartOfWelcome {
-        font-size: 80px; 
+        font-size: 28px; 
+    }
+
+    .secondHomePage .whyToChooseUs {
+        height: auto !important;
+        margin-bottom: 250px;
     }
 
     .secondHomePage .whyToChooseUs .block .textPart h2 {
-        font-size: 72px;
+        font-size: 34px; 
     }
 
     .secondHomePage .whyToChooseUs .block .textPart p {
-        font-size: 42px;
+        font-size: 22px; 
     }
-} */
+}
+
+
+@media (max-width: 480px) {
+    .secondHomePage .secondPageTopBlock .backgroundPart .textPart h2 {
+        font-size: 29px;
+    }
+
+    .secondHomePage .secondPageTopBlock .backgroundPart .textPart .animatedPartOfWelcome {
+        font-size: 24px; 
+    }
+
+    .secondHomePage .whyToChooseUs .block .textPart h2 {
+        font-size: 30px;
+    }
+
+    .secondHomePage .whyToChooseUs .block .textPart p {
+        font-size: 20px;
+    }
+}

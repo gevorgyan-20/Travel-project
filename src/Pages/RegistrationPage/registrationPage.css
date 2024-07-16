@@ -121,7 +121,7 @@
   100% { color: #1e90ff; }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .tour-registration {
       padding: 30px;
   }
@@ -135,7 +135,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   .tour-registration {
       padding: 40px;
   }

@@ -1,36 +1,36 @@
 .secondHomePageWhyBlocks {
-    width: 1320px;
+    width: 1120px;
     height: 320px;
     display: flex;
     padding-top: 20px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     & .eachSecondHomePageWhyBlock{
-        width: 280px;
-        height: 280px;
+        width: 260px;
+        height: 260px;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 10px;
         & .circleBlocks {
-            height: 174px;
-            width: 174px;
+            height: 164px;
+            width: 164px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: rgb(201, 198, 198);
             div {
-                height: 160px;
-                width: 160px;
+                height: 150px;
+                width: 150px;
                 border-radius: 50%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 background-color: rgb(142, 147, 165);
                 div {
-                    height: 145px;
-                    width: 145px;
+                    height: 135px;
+                    width: 135px;
                     border-radius: 50%;
                     display: flex;
                     justify-content: center;
@@ -53,55 +53,82 @@
     } 
 }
 
-@media (max-width: 1366px) {
+
+@media (max-width: 1024px) {
     .secondHomePageWhyBlocks {
         width: 100%;
         padding: 10px;
-    }
-
-    .eachSecondHomePageWhyBlock {
-        width: 25%;
-    }
-}
-
-@media (max-width: 1024px) {
-    .eachSecondHomePageWhyBlock {
-        width: 30%;
+        & .eachSecondHomePageWhyBlock {
+            width: 30%;
+            & .textBlocks span {
+                font-size: 18px;
+            }
+        }
     }
 }
 
 @media (max-width: 768px) {
     .secondHomePageWhyBlocks {
         flex-wrap: wrap;
+        height: auto;
+        & .eachSecondHomePageWhyBlock {
+            height: 230px;
+            width: 45%;
+            margin-bottom: 20px;
+        }
     }
-
-    .eachSecondHomePageWhyBlock {
-        width: 45%;
-        margin-bottom: 20px;
-    }
-
+    
     .circleBlocks {
-        height: 140px;
-        width: 140px;
-    }
-
-    .circleBlocks > div {
-        height: 125px;
-        width: 125px;
-    }
-
-    .circleBlocks > div > div {
-        height: 110px;
-        width: 110px;
+        height: 140px !important;
+        width: 140px !important;
+        div {
+            height: 125px !important;
+            width: 125px !important;
+            div {
+                height: 110px !important;
+                width: 110px !important;
+            }
+        }
     }
 
     .textBlocks > span {
-        font-size: 18px;
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 676px) {
+    .circleBlocks {
+        height: 125px !important;
+        width: 125px !important;
+    }
+
+    .circleBlocks > div {
+        height: 115px !important;
+        width: 115px !important;
+    }
+
+    .circleBlocks > div > div {
+        height: 100px !important;
+        width: 100px !important;
     }
 }
 
 @media (max-width: 480px) {
     .eachSecondHomePageWhyBlock {
         width: 100%;
+    }
+    .circleBlocks {
+        height: 115px !important;
+        width: 115px !important;
+    }
+
+    .circleBlocks > div {
+        height: 100px !important;
+        width: 100px !important;
+    }
+
+    .circleBlocks > div > div {
+        height: 85px !important;
+        width: 85px !important;
     }
 }

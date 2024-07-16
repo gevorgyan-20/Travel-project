@@ -1,6 +1,6 @@
 .aboutPartOfHomePage {
-    width: 1300px;
-    height: 850px;
+    width: 100%;
+    height: auto;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -99,21 +99,18 @@
     }
 }
 
+@media (max-width: 1122px) {
+    .aboutPartOfHomePage .bottomPart h5 {
+        font-size: 21px !important;
+    }
+
+    .aboutPartOfHomePage .bottomPart p,
+    .aboutPartOfHomePage .bottomPart ul li {
+        font-size: 17px !important;
+    }
+}
+
 @media (max-width: 1024px) {
-    .aboutPartOfHomePage .topPart {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .aboutPartOfHomePage .topPart .imagePart,
-    .aboutPartOfHomePage .topPart .contentPart {
-        width: 100%;
-    }
-
-    .aboutPartOfHomePage .topPart .imagePart div {
-        width: 80%;
-    }
-
     .aboutPartOfHomePage .topPart .contentPart h1 {
         font-size: 36px;
     }
@@ -123,9 +120,22 @@
     }
 }
 
+@media (max-width: 802px) {
+    .aboutPartOfHomePage {
+        margin-bottom: 25px;
+    }
+}
+
 @media (max-width: 768px) {
+    .aboutPartOfHomePage {
+        margin-bottom: 35px;
+    }
     .aboutPartOfHomePage .bottomPart h5 {
         font-size: 20px;
+    }
+
+    .aboutPartOfHomePage .topPart .imagePart div {
+        width: 100%;
     }
 
     .aboutPartOfHomePage .bottomPart p,
@@ -138,22 +148,55 @@
     }
 }
 
-@media (max-width: 480px) {
-    .aboutPartOfHomePage .topPart .contentPart h1 {
-        font-size: 28px;
+@media (max-width: 696px) {
+    .aboutPartOfHomePage .topPart {
+        flex-direction: column;
+        height: auto;
     }
 
-    .aboutPartOfHomePage .topPart .contentPart p,
+    .aboutPartOfHomePage .topPart .imagePart {
+        width: 70%;
+    }
+    .aboutPartOfHomePage .topPart .contentPart {
+        width: 100%;
+    }
     .aboutPartOfHomePage .bottomPart p,
     .aboutPartOfHomePage .bottomPart ul li {
-        font-size: 15px;
-    }
-
-    .aboutPartOfHomePage .bottomPart h5 {
-        font-size: 18px;
+        font-size: 15px !important;
     }
 
     .aboutPartOfHomePage .bottomPart .lastPart {
-        font-size: 16px;
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .aboutPartOfHomePage .topPart .imagePart {
+        width: 85%;
+    }
+
+    .aboutPartOfHomePage {
+        margin-bottom: 40px !important;
+    }
+
+    .aboutPartOfHomePage .topPart .contentPart h1 {
+        font-size: 28px !important;
+    }
+
+    .aboutPartOfHomePage .topPart .contentPart p{
+        font-size: 15px !important;
+    }
+
+    .aboutPartOfHomePage .bottomPart p,
+    .aboutPartOfHomePage .bottomPart ul li {
+        font-size: 13px !important;
+    }
+
+    .aboutPartOfHomePage .bottomPart .lastPart {
+        font-size: 14.5px !important;
+    }
+
+    .aboutPartOfHomePage .bottomPart h5 {
+        font-size: 18px !important;
     }
 }

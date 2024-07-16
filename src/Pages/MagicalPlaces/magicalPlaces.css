@@ -120,15 +120,34 @@ button {
 }
 
 @media (max-width: 768px) {
-  .slideContent {
-    width: 70%; 
-    height: 50vh;
-  }
+  .slideContentInner .slideSubtitle,
+.slideContentInner .slideTitle {
+  font-size: 1.6rem;
+  font-weight: normal;
+  letter-spacing: 0.15ch;
 }
-
-@media (max-width: 1024px) {
+.slideContentInner .slideDescription {
+  font-size: 0.6rem;
+  letter-spacing: 0.15ch;
+}
+.slideContent {
+  width: 30vw;
+  height: 50vw;
+}
+}
+@media (max-width: 570px) {
+  .slideContentInner .slideSubtitle,
+  .slideContentInner .slideTitle {
+    font-size: 1.2rem;
+    font-weight: normal;
+    letter-spacing: 0.1ch;
+  }
+  .slideContentInner .slideDescription {
+    font-size: 0.4rem;
+    letter-spacing: 0.1ch;
+  } 
   .slideContent {
-    width: 50%; 
-    height: 70vh;
+    width: 33vw;
+    height: 60vw;
   }
 }
