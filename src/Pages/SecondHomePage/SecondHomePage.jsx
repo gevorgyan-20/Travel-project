@@ -34,15 +34,15 @@ const SecondHomePage = () => {
         setSeeMorePartReview(false)
     }
 
-    const text = "HHere you make your first step of realizing your dream";
+    const text = "Here you make your first steps of realizing your dream";
     const [animatedText, setAnimatedText] = useState('')
     const [scrollSize, setScrollSize] = useState(0)
-    const indexRef = useRef(0);
+    const indexRef = useRef(-1);
 
     function typeWriter() {
         if(indexRef.current < text.length) {
-            setAnimatedText((previous) => previous + text.charAt(indexRef.current));
             indexRef.current++;
+            setAnimatedText((previous) => previous + text.charAt(indexRef.current));
             setTimeout(typeWriter, 80);
         }
     }
